@@ -1,0 +1,146 @@
+.chessboard-container {
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee;
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 10px;
+  width: max-content;
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  user-select: none;
+  position: relative;
+}
+
+.error-message {
+  height: 24px;
+  color: red;
+  margin-bottom: 8px;
+  min-width: 240px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  border: 2px solid #444;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.board-square {
+  width: 60px;
+  height: 60px;
+  font-size: 2.5em;
+  text-align: center;
+  line-height: 60px;
+  box-sizing: border-box;
+  user-select: none;
+  transition: border-color 0.2s ease;
+}
+
+.dark-square {
+  background-color: #0088ffff; /* blue */
+}
+
+.light-square {
+  background-color: #b22222; /* firebrick red */
+}
+
+.selected-square {
+  border: 3px solid #e76f51 !important;
+}
+
+.board-square:not(.selected-square) {
+  border: 1px solid #264653;
+}
+
+.white-piece {
+  color: #f1faee;
+}
+
+.black-piece {
+  color: #0d1b2a;
+}
+
+.status-message {
+  margin-top: 12px;
+  color: #e76f51;
+  font-weight: 700;
+  font-size: 1.1em;
+  user-select: none;
+  min-height: 24px;
+  text-align: center;
+}
+
+.promotion-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  border: 2px solid #e76f51;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 10;
+  display: flex;
+  gap: 15px;
+}
+
+.promotion-choice {
+  width: 50px;
+  height: 50px;
+  font-size: 3em;
+  color: #e76f51;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e76f51;
+  border-radius: 6px;
+  background-color: #121212;
+  transition: background-color 0.3s ease;
+}
+
+.promotion-choice:hover {
+  background-color: #e76f51;
+}
+
+.game-over-container {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e76f51;
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 10px;
+  width: max-content;
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  user-select: none;
+  text-align: center;
+}
+
+.play-again-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #e76f51;
+  border: none;
+  border-radius: 6px;
+  color: #121212;
+  cursor: pointer;
+  user-select: none;
+}
+
+.play-again-button:hover {
+  background-color: #b44a3e;
+}
